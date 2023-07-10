@@ -20,6 +20,7 @@ For example, add the string "Nipisong" for the Nipisong location, or "Toronto Et
 ```
 python main.py
 ```
+8. If everything was done currently, a new browser window should be open. Let it run in the background and do not touch it.
 
 # Disclaimer
 1. The provided code herein is intended strictly for academic and research-related purposes. The user is responsible for complying with this usage policy.
