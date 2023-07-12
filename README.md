@@ -5,7 +5,8 @@ If a spot appears, it will send you a text with the specific location and give y
 
 # Usage
 1. You must already have an Ontario Drivetest account, and have a test pre-booked. The script will only attempt to reschedule should anything earlier become available.
-2. Install the packages. The code assumes that Python 3.9+ and Pip are installed.
+2. Make sure you have chrome installed
+3. Install the packages. The code assumes that Python 3.9+ and Pip are installed.
 ```
 pip install selenium
 pip install twilio
@@ -13,7 +14,7 @@ pip install undetected-chromedriver
 ```
 3. Create a [Twilio](https://www.twilio.com/try-twilio) account and fill in ```keys.py```. Your target number can only be your own if you are using the trial account for Twilio.
 4. Fill in the strings in ```main.py``` for the driver's license and expiry date.
-5. (***TODO***: right now the string is the unique aria-label for the location) for the centres, add the name as you see in the centre selection.
+5. For the centres, add the name as you see it in the centre selection.
 For example, add the string "Nipisong" for the Nipisong location, or "Toronto Etobicoke" for the Etobicoke location.
 ![Image of the centre select](https://i.ibb.co/TL2kJdW/Screen-Shot-2023-07-10-at-12-19-22-AM.png "Location Select List")
 7. Now, the script is ready. Let's run it!
@@ -21,6 +22,8 @@ For example, add the string "Nipisong" for the Nipisong location, or "Toronto Et
 python main.py
 ```
 8. If everything was done currently, a new browser window should be open. Let it run in the background and do not touch it.
+
+Note: The script is dependent on the UC module to pass the Cloudflare captcha. Should the module or captcha be updated, it may not work. 
 
 # Disclaimer
 1. The provided code herein is intended strictly for academic and research-related purposes. The user is responsible for complying with this usage policy.
