@@ -1,0 +1,17 @@
+LOCATIONS_HASHMAP = {'Arnprior': 'targetLoc0', 'Atikokan': 'targetLoc1', 'Bancroft': 'targetLoc2', 'Barrie': 'targetLoc3', 'Barrys Bay': 'targetLoc4', 'Belleville': 'targetLoc5', 'Blind River': 'targetLoc6', 'Brampton': 'targetLoc7', 'Brantford': 'targetLoc8', 'Brockville': 'targetLoc9', 'Burlington': 'targetLoc10', 'Carleton Place': 'targetLoc11', 'Casselman': 'targetLoc12', 'Chapleau': 'targetLoc13', 'Chatham': 'targetLoc14', 'Clinton': 'targetLoc15', 'Cochrane': 'targetLoc16', 'Collingwood': 'targetLoc17', 'Cornwall': 'targetLoc18', 'Dryden': 'targetLoc19', 'Dubreuilville': 'targetLoc20', 'Ear Falls': 'targetLoc21', 'Elliott Lake': 'targetLoc22', 'Espanola': 'targetLoc23', 'Fort Frances': 'targetLoc24', 'Geraldton': 'targetLoc25', 'Guelph': 'targetLoc26', 'Haliburton': 'targetLoc27', 'Hamilton': 'targetLoc28', 'Hawkesbury': 'targetLoc29', 'Hearst': 'targetLoc30', 'Hornepayne': 'targetLoc31', 'Huntsville': 'targetLoc32', 'Ignace': 'targetLoc33', 'Kapuskasing': 'targetLoc34', 'Kenora': 'targetLoc35', 'Kingston': 'targetLoc36', 'Kirkland Lake': 'targetLoc37', 'Kitchener': 'targetLoc38', 'Leamington': 'targetLoc39', 'Lindsay': 'targetLoc40', 'Little Current': 'targetLoc41', 'London': 'targetLoc42', 'Madoc': 'targetLoc43', 'Manitouwadge': 'targetLoc44', 'Marathon': 'targetLoc45', 'Mattawa': 'targetLoc46', 'Mississauga': 'targetLoc47', 'Moosonee': 'targetLoc48', 'New Liskeard': 'targetLoc49', 'Newmarket': 'targetLoc50', 'Nipigon': 'targetLoc51', 'North Bay': 'targetLoc52', 'Oakville': 'targetLoc53', 'Orangeville': 'targetLoc54', 'Orillia': 'targetLoc55', 'Oshawa': 'targetLoc56', 'Ottawa Canotek': 'targetLoc57', 'Ottawa Walkley': 'targetLoc58', 'Owen Sound': 'targetLoc59', 'Parry Sound': 'targetLoc60', 'Pembroke': 'targetLoc61', 'Peterborough': 'targetLoc62', 'Pickle Lake': 'targetLoc63', 'Port Hope': 'targetLoc64', 'Rainy River': 'targetLoc65', 'Red Lake': 'targetLoc66', 'Renfrew': 'targetLoc67', 'Rockland': 'targetLoc68', 'Sarnia': 'targetLoc69', 'Sault Ste Marie': 'targetLoc70', 'Schreiber': 'targetLoc71', 'Simcoe': 'targetLoc72', 'Sioux Lookout': 'targetLoc73', 'Smiths Falls': 'targetLoc74', 'St Catharines': 'targetLoc75', 'Stratford': 'targetLoc76', 'Sudbury': 'targetLoc77', 'Sundridge': 'targetLoc78', 'Thessalon': 'targetLoc79', 'Thunder Bay': 'targetLoc80', 'Tillsonburg': 'targetLoc81', 'Timmins': 'targetLoc82', 'Toronto Downsview': 'targetLoc83', 'Toronto Etobicoke': 'targetLoc84', 'Toronto Metro East': 'targetLoc85', 'Toronto Port Union': 'targetLoc86', 'Walkerton': 'targetLoc87', 'Wawa': 'targetLoc88', 'Westport': 'targetLoc89', 'White River': 'targetLoc90', 'Winchester': 'targetLoc91', 'Windsor': 'targetLoc92', 'Woodstock': 'targetLoc93'}
+
+### Aggregation Methodology ###
+'''
+data_buttons = WebDriverWait(browser, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".locationsItem.w-100.ng-star-inserted")))
+    location_ids_hashtable = {}
+    for elem in data_buttons:
+        # get the ID
+        button_id = elem.get_attribute('id')
+        # find the span with class 'locationName' under this button and get its text
+        location_name = elem.find_element(By.CLASS_NAME, 'locationName').text.strip()  # remove any potential leading/trailing whitespace
+        # add to dictionary
+        location_ids_hashtable[location_name] = button_id
+
+    # output dictionary
+    print(location_ids_hashtable)
+'''
