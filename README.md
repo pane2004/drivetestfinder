@@ -16,7 +16,9 @@ pip install undetected-chromedriver
 4. Fill in the strings in ```main.py``` for the driver's license and expiry date.
 5. For the centres, add the name as you see it in the centre selection.
 For example, add the string "Nipisong" for the Nipisong location, or "Toronto Etobicoke" for the Etobicoke location.
+
 ![Image of the centre select](https://i.ibb.co/TL2kJdW/Screen-Shot-2023-07-10-at-12-19-22-AM.png "Location Select List")
+
 7. Now, the script is ready. Let's run it!
 ```
 python main.py
